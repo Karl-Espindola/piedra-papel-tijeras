@@ -72,20 +72,29 @@ function total(ganoYo,ganaPc){
     }
 }
 
+function jugar(){
+
+    for(let i=0; i<n; i++){
+        yo=+prompt(`
+        Piedra (1)
+        Papel  (2) 
+        Tijera (3)
+        Ingrese el número según la opccion elegida`);
+    
+        pc=Math.floor(Math.random()*3+1);
+        array=vs(yo,pc); 
+       
+    }
+    return array
+}
+
+
 
 let n=+prompt("Ingresa el numero de veces que jugaras");
+array=jugar();
+total(array[0],array[1]);
 
-for(let i=0; i<n; i++){
-    yo=+prompt(`
-    Piedra (1)
-    Papel  (2) 
-    Tijera (3)
-    Ingrese el número según la opccion elegida`);
 
-    pc=Math.floor(Math.random()*3+1);
 
-    array=tvs(yo,pc);
-    total(array[0],array[1]);
-}
 
 
